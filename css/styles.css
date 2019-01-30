@@ -1,13 +1,40 @@
 .jumbotron {
   text-align: center;
+  background-image: url(../img/dice.gif);
+  background-size: cover;
+  color:hotpink;
+}
+#pvaiMenu {
+  display: none;
 }
 
 #diceHolder {
   font-size: 30px;
 }
 
-#startGame {
+#startGameButton {
+  background-color: black;
+  color:hotpink;
   display: block;
+}
+
+#leftHold {
+  background-color: black;
+  color:hotpink;
+}
+
+#rightHold{
+  background-color: black;
+  color:hotpink;
+}
+#PVP {
+  background-color: black;
+  color:hotpink;
+}
+
+#PVAI{
+  background-color: black;
+  color:hotpink;
 }
 
 #menu {

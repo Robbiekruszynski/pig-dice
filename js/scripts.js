@@ -10,6 +10,13 @@ function pvpMenu() {
 }
 
 
+function pvpAI() {
+  $("#menu").toggle();
+  $("#pvaiMenu").toggle();
+
+}
+
+
 
 
 
@@ -29,12 +36,21 @@ $(document).ready(function() {
     $("#rightPlayer").text(player2);
     console.log("IS working");
 
-
-
-
-
   });
+  $("form#playerName").submit(function(evnet) {
+    event.preventDefault();
+    var player = $("input#player1").val();
+    var difficulty = $("#difficulty").val();
+    $("#pvaiMenu").toggle();
+    $("#game").toggle();
+    $("#rightPlayer").text(player);
+    $("#leftPlayer").text(difficulty + " AI");
 
+
+
+
+
+  })
 
 
 

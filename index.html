@@ -27,7 +27,7 @@
               </div>
               <div class="modeLabel col-md-6">
                 <label for="P-V-AI">Player Versus AI</label>
-                <button type="button" class="btn btn-primary btn-lg btn-block mode" id="PVAI">P-V-AI</button>
+                <button type="button" class="btn btn-primary btn-lg btn-block mode" id="PVAI" onclick="pvpAI()">P-V-AI</button>
               </div>
               <div id="gameTitle"><h2>Game Info</h2>
                 <p id="gameInfo">Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold":
@@ -52,7 +52,22 @@
               </div>
               <button id="pvpStart" type="submit" name="btn">Play!</button>
             </form>
+          </div>
 
+          <div id="pvaiMenu">
+            <form id="playerName">
+              <div class="form-group">
+                <label for="player1">Player Name:</label>
+                <input type="text" class="form-control" id=player1>
+                <label for="difficulty">Pick AI difficulty</label>
+                <select class="form-control" id="difficulty">
+                  <option>Easy</option>
+                  <option>Medium</option>
+                  <option>Hard</option>
+                </select>
+              </div>
+              <button id="pvaiStart" type="submit">Play!</button>
+            </form>
           </div>
 
           <div id="game">
