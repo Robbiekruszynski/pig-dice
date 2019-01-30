@@ -1,0 +1,69 @@
+.jumbotron {
+  text-align: center;
+}
+
+#diceHolder {
+  font-size: 30px;
+}
+
+#startGame {
+  display: block;
+}
+
+#menu {
+  display: none;
+}
+#pvpMenu {
+  display: none;
+}
+
+#gameTitle {
+  text-align: center;
+  margin-top: 5%
+}
+.mode {
+  height: 90px;
+}
+
+#gameInfo {
+  text-align: center;
+  margin-top: 2%
+}
+
+#game {
+  display: none;
+}
+
+.modeLabel {
+  text-align: center;
+}
+.col-md-2 {
+  border: auto;
+  border-style: solid;
+  text-align: center;
+}
+
+.holdButton {
+  height: 100%;
+}
+
+.col-md-8 {
+  border: auto;
+  border-style: solid;
+  text-align: center;
+
+}
+
+#topRow {
+
+
+}
+
+#midRow {
+  height: 500px;
+}
+
+#bottomRow {
+
+
+}

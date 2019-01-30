@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+     <link href="css/styles.css" rel="stylesheet" type="text/css">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <script src="js/scripts.js"></script>
+
+  <title>Oink Roll</title>
+  </head>
+    <body>
+      <div class = "container">
+        <div class = "jumbotron">
+          <h1>Oink roll</h1>
+          <h3>The game of life</h3>
+        </div>
+          <div id="startGame">
+            <button type="button" class="btn btn-primary btn-lg btn-block" id="startGameButton" onclick="hideStartGame()">Start Game</button>
+          </div>
+
+          <div id="menu">
+            <div class="row">
+              <div class="modeLabel col-md-6">
+                <label for="PVP">Player Versus Player</label>
+                <button type="button" class="btn btn-primary btn-lg btn-block mode" id="PVP" onclick="pvpMenu()">P-V-P</button>
+              </div>
+              <div class="modeLabel col-md-6">
+                <label for="P-V-AI">Player Versus AI</label>
+                <button type="button" class="btn btn-primary btn-lg btn-block mode" id="PVAI">P-V-AI</button>
+              </div>
+              <div id="gameTitle"><h2>Game Info</h2>
+                <p id="gameInfo">Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold":
+
+                If the player rolls a 1, they score nothing and it becomes the next player's turn.
+                If the player rolls any other number, it is added to their turn total and the player's turn continues.
+                If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.
+                The first player to score 100 or more points wins.
+
+                For example, the first player, Anne, begins a turn with a roll of 5. Anne could hold and score 5 points, but chooses to roll again. Anne rolls a 2, and could hold with a turn total of 7 points, but chooses to roll again. Anne rolls a 1, and must end her turn without scoring. The next player, Bob, rolls the sequence 4-5-3-5-5, after which he chooses to hold, and adds his turn total of 22 points to his score.</p>
+              </div>
+            </div>
+          </div>
+
+          <div id="pvpMenu">
+            <form id="playerNames">
+              <div class="form-group">
+                <label for="players1">Player 1 Name:</label>
+                <input type="text" class="form-control" id=players1>
+                <label for="players2">Player 2 Name:</label>
+                <input type="text" class="form-control" id="players2">
+              </div>
+              <button id="pvpStart" type="submit" name="btn">Play!</button>
+            </form>
+
+          </div>
+
+          <div id="game">
+            <div class = "row" id="topRow">
+              <div class = "col-md-2">
+                <div class = "player-one">
+                  <p><span id="rightPlayer"></span></p>
+                </div>
+              </div>
+              <div class = "col-md-8">
+                <p id="diceHolder"> Dice holder </p>
+              </div>
+              <div class = "col-md-2">
+                <div class = "player-two">
+                  <p><span id="leftPlayer"></span></p>
+                </div>
+              </div>
+            </div>
+            <div class = "row" id="midRow">
+              <div class = "col-md-2">
+                <button id="leftHold" type="button" class="btn btn-primary btn-lg btn-block holdButton">Hold</button>
+              </div>
+              <div class = "col-md-8">
+                <p> dice holder</p>
+              </div>
+              <div class = "col-md-2">
+                <button id="rightHold" type="button" class="btn btn-primary btn-lg btn-block holdButton">Hold</button>
+              </div>
+            </div>
+            <div class="row" id="bottomRow">
+              <div class="col-md-2">
+                <span id="leftScore"></span>
+              </div>
+              <div class="col-md-8">
+                <span id="lastRolls"></span>
+              </div>
+              <div class="col-md-2">
+                <span id="rightScore"></span>
+              </div>
+            </div>
+          </div>
+
+
+      </div>
+    </body>
+</html>
