@@ -126,28 +126,34 @@ function rightHold() {
 }
 
 var previousRolls = [];
+var string = [];
 function showPreviousRolls(roll) {
   var length = previousRolls.length;
-  var index = length - 1;
-  console.log(previousRolls);
-    if(1 == roll) {
-      $("#lastRolls").append('<img src="img/side1.png" height="60px" width="60px">');
-    }
-    if(2 == roll) {
-      $("#lastRolls").append('<img src="img/side2.png" height="60px" width="60px">');
-    }
-    if(3 == roll) {
-      $("#lastRolls").append('<img src="img/side3.png" height="60px" width="60px">');
-    }
-    if(4 == roll) {
-      $("#lastRolls").append('<img src="img/side4.png" height="60px" width="60px">');
-    }
-    if(5 == roll) {
-      $("#lastRolls").append('<img src="img/side5.png" height="60px" width="60px">');
-    }
-    if(6 == roll) {
-      $("#lastRolls").append('<img src="img/side6.png" height="60px" width="60px">');
-    }
+  if(1 == roll) {
+    $("#lastRolls").append("<li>" + string + '<img src="img/side1.png" height="60px" width="60px">' + "</li>");
+    string = string +'<img src="img/side1.png" height="60px" width="60px">';
+  }
+  if(2 == roll) {
+    $("#lastRolls").append("<li>" + string + '<img src="img/side2.png" height="60px" width="60px">' + "</li>");
+    string = string +'<img src="img/side2.png" height="60px" width="60px">';
+  }
+  if(3 == roll) {
+    $("#lastRolls").append("<li>" + string + '<img src="img/side3.png" height="60px" width="60px">' + "</li>");
+    string = string +'<img src="img/side3.png" height="60px" width="60px">';
+
+  }
+  if(4 == roll) {
+    $("#lastRolls").append("<li>" + string + '<img src="img/side4.png" height="60px" width="60px">' + "</li>");
+    string = string +'<img src="img/side4.png" height="60px" width="60px">';
+  }
+  if(5 == roll) {
+    $("#lastRolls").append("<li>" + string + '<img src="img/side5.png" height="60px" width="60px">' + "</li>");
+    string = string +'<img src="img/side5.png" height="60px" width="60px">';
+  }
+  if(6 == roll) {
+    $("#lastRolls").append("<li>" + string + '<img src="img/side6.png" height="60px" width="60px">' + "</li>");
+    string = string +'<img src="img/side6.png" height="60px" width="60px">';
+  }
 
 
 
