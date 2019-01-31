@@ -46,9 +46,9 @@
             <form id="playerNames">
               <div class="form-group">
                 <label for="players1">Player 1 Name:</label>
-                <input type="text" class="form-control" id=players1>
+                <input type="text" class="form-control" id="players1" required>
                 <label for="players2">Player 2 Name:</label>
-                <input type="text" class="form-control" id="players2">
+                <input type="text" class="form-control" id="players2" required>
               </div>
               <button id="pvpStart" type="submit" name="btn">Play!</button>
             </form>
@@ -58,7 +58,7 @@
             <form id="playerName">
               <div class="form-group">
                 <label for="player1">Player Name:</label>
-                <input type="text" class="form-control" id=player1>
+                <input type="text" class="form-control" id=player1 required>
                 <label for="difficulty">Pick AI difficulty</label>
                 <select class="form-control" id="difficulty">
                   <option>Easy</option>
@@ -74,7 +74,7 @@
             <div class = "row" id="topRow">
               <div class = "col-md-2">
                 <div class = "player-one">
-                  <p><span id="rightPlayer"></span></p>
+                  <p><span id="leftPlayer"></span></p>
                 </div>
               </div>
               <div class = "col-md-8">
@@ -82,19 +82,21 @@
               </div>
               <div class = "col-md-2">
                 <div class = "player-two">
-                  <p><span id="leftPlayer"></span></p>
+                  <p><span id="rightPlayer"></span></p>
                 </div>
               </div>
             </div>
             <div class = "row" id="midRow">
               <div class = "col-md-2">
-                <button id="leftHold" type="button" class="btn btn-primary btn-lg btn-block holdButton">Hold</button>
+                <button id="leftHold" type="button" class="btn btn-primary btn-lg btn-block holdButton" onclick="leftHold()">Hold</button>
               </div>
               <div class = "col-md-8">
                 <p> dice holder</p>
+                <span id="diceRoll"></span>
+                <button type="submit" class="btn btn-primary btn-lg" onclick="gamePlay()" id="rollButton">Roll!</button>
               </div>
               <div class = "col-md-2">
-                <button id="rightHold" type="button" class="btn btn-primary btn-lg btn-block holdButton">Hold</button>
+                  <button id="rightHold" type="button" class="btn btn-primary btn-lg btn-block holdButton" onclick="rightHold()">Hold</button>
               </div>
             </div>
             <div class="row" id="bottomRow">
@@ -109,8 +111,6 @@
               </div>
             </div>
           </div>
-
-
       </div>
     </body>
 </html>

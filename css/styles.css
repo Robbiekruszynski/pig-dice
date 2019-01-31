@@ -7,7 +7,9 @@
 #pvaiMenu {
   display: none;
 }
-
+#bottomRow{
+  height: 100px;
+}
 #diceHolder {
   font-size: 30px;
 }
@@ -21,11 +23,13 @@
 #leftHold {
   background-color: black;
   color:hotpink;
+  display: none;
 }
 
 #rightHold{
   background-color: black;
   color:hotpink;
+  display: none;
 }
 #PVP {
   background-color: black;
